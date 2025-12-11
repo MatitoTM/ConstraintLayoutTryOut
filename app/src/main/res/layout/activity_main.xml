@@ -5,45 +5,27 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/textview_movieName"
-        android:layout_width="114dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="16dp"
-        android:text="Back to the Futre l"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageview_moviePoster" />
 
     <ImageView
         android:id="@+id/imageview_moviePoster"
         android:layout_width="412dp"
         android:layout_height="234dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/btf_backdrop" />
-
-    <TextView
-        android:id="@+id/textView_movieTagline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="abcdefghijklmnopqrstuvwxyz"
-        app:layout_constraintStart_toStartOf="@+id/textview_movieName"
-        app:layout_constraintTop_toBottomOf="@+id/textview_movieName" />
 
     <ImageView
         android:id="@+id/imageview_movieCover"
         android:layout_width="139dp"
         android:layout_height="180dp"
-        android:layout_marginStart="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageview_moviePoster"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toBottomOf="@+id/imageview_moviePoster"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/btf_cover" />
 
     <ImageView
@@ -54,7 +36,7 @@
         app:layout_constraintEnd_toStartOf="@+id/imageview_status2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toBottomOf="@+id/imageview_movieCover"
         app:srcCompat="@drawable/pic1" />
 
@@ -64,6 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Status 1"
+        android:textColor="#FDFDFD"
         app:layout_constraintEnd_toEndOf="@+id/imageview_status1"
         app:layout_constraintStart_toStartOf="@+id/imageview_status1"
         app:layout_constraintTop_toBottomOf="@+id/imageview_status1" />
@@ -92,7 +75,7 @@
         android:id="@+id/imageview_status4"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline19"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageview_status3"
         app:layout_constraintTop_toTopOf="@+id/imageview_status1"
@@ -104,6 +87,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Status 2"
+        android:textColor="#FDFDFD"
         app:layout_constraintEnd_toEndOf="@+id/imageview_status2"
         app:layout_constraintStart_toStartOf="@+id/imageview_status2"
         app:layout_constraintTop_toBottomOf="@+id/imageview_status2" />
@@ -114,6 +98,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Status 3"
+        android:textColor="#FDFDFD"
         app:layout_constraintEnd_toEndOf="@+id/imageview_status3"
         app:layout_constraintStart_toStartOf="@+id/imageview_status3"
         app:layout_constraintTop_toBottomOf="@+id/imageview_status3" />
@@ -124,6 +109,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Status 4"
+        android:textColor="#FDFDFD"
         app:layout_constraintEnd_toEndOf="@+id/imageview_status4"
         app:layout_constraintStart_toStartOf="@+id/imageview_status4"
         app:layout_constraintTop_toBottomOf="@+id/imageview_status4" />
@@ -139,5 +125,92 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview_status1" />
+
+    <TextView
+        android:id="@+id/textview_plotSummaryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Plot Summary"
+        android:textColor="#FDFDFD"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <TextView
+        android:id="@+id/textview_plotSummary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="dfhijfdghoifdghofidghfgdohjfgdpoihjfdgpohjfgdhofdgjhfgoihjobcjvbojphoshpodhpfdhpfdgihpofidgjbpfogfg"
+        android:textColor="#FDFDFD"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline19"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/textview_plotSummaryTitle" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <ImageView
+        android:id="@+id/imageview_starRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/guideline19"
+        app:layout_constraintStart_toEndOf="@id/barrier"
+        app:layout_constraintTop_toTopOf="@+id/textview_movieName"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <TextView
+        android:id="@+id/textview_starRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8.8"
+        android:textColor="#FDFDFD"
+        app:layout_constraintEnd_toEndOf="@+id/imageview_starRating"
+        app:layout_constraintStart_toStartOf="@+id/imageview_starRating"
+        app:layout_constraintTop_toBottomOf="@+id/imageview_starRating" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="textview_movieName,textView_movieTagline" />
+
+    <TextView
+        android:id="@+id/textview_movieName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Back to the Futre l"
+        android:textColor="#FDFDFD"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/imageview_movieCover"
+        app:layout_constraintTop_toBottomOf="@+id/imageview_moviePoster" />
+
+    <TextView
+        android:id="@+id/textView_movieTagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="abcdefghijklmnopqrstuvwxyz"
+        android:textColor="#FDFDFD"
+        app:layout_constraintStart_toStartOf="@+id/textview_movieName"
+        app:layout_constraintTop_toBottomOf="@+id/textview_movieName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
